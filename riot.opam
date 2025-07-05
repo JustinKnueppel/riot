@@ -13,17 +13,17 @@ depends: [
   "bytestring"
   "castore" {with-test & >= "0.0.2"}
   "config" {>= "0.0.1"}
-  "gluon" {>= "0.0.1"}
+  "gluon"
   "mdx" {with-test & >= "2.3.1"}
-  "mirage-crypto" {>= "0.11.2"}
-  "mirage-crypto-rng" {>= "0.11.2"}
-  "mtime" {>= "2.0.0"}
+  "mirage-crypto" {>= "2.0.1"}
+  "mirage-crypto-rng" {>= "2.0.1"}
+  "mtime" {>= "2.1.0"}
   "ocaml" {>= "5.1"}
   "odoc" {with-doc & >= "2.2.2"}
-  "ptime" {>= "1.1.0"}
+  "ptime" {>= "1.2.0"}
   "rio"
   "telemetry" {>= "0.0.1"}
-  "tls" {>= "1.0.0"}
+  "tls" {>= "2.0.1"}
   "uri" {>= "4.4.0"}
   "dune" {>= "3.11"}
 ]
@@ -43,3 +43,6 @@ build: [
 ]
 dev-repo: "git+https://github.com/riot-ml/riot.git"
 available: arch != "x86_32" & arch != "arm32" & arch != "ppc64" & arch != "s390x" & os != "freebsd"
+pin-depends: [
+  ["gluon" "git+https://github.com/riot-ml/gluon.git#main"]
+]

@@ -3,13 +3,13 @@
 Thanks for taking the time to contribute to Riot ✨ All contributions are
 welcomed! This includes:
 
-* PRs with bug fixes or features
-* Examples
-* Doc fixes
-* Bug reports
-* Links blogs featuring Riot
-* Links to projects using Riot that can serve as large examples
-* Links to libraries that can be used with Riot
+- PRs with bug fixes or features
+- Examples
+- Doc fixes
+- Bug reports
+- Links blogs featuring Riot
+- Links to projects using Riot that can serve as large examples
+- Links to libraries that can be used with Riot
 
 ### Installing from Sources
 
@@ -18,12 +18,8 @@ welcomed! This includes:
 To install Riot from sources, make sure to include all its dependencies:
 
 ```sh
-; opam pin config.0.0.2 git+https://github.com/ocaml-sys/config.ml -y
-; opam pin libc.0.0.1 git+https://github.com/ocaml-sys/libc.ml -y
-; opam pin rio.0.0.8 git+https://github.com/riot-ml/riot -y
-; opam pin bytestring.0.0.8 git+https://github.com/riot-ml/riot -y
-; opam pin gluon.0.0.8 git+https://github.com/riot-ml/riot -y
-; opam pin riot.0.0.8 git+https://github.com/riot-ml/riot -y
+; opam pin add --dev-repo gluon -y # dev-repo needed until this is released https://github.com/riot-ml/gluon/pull/2
+; opam install tls config telemetry config rio bytestring libc mtime # dependencies needed to run `dune build`
 ```
 
 You can run builds with:
@@ -144,7 +140,7 @@ pass to them only is evaluated when that log level is enabled.
 ## Performance
 
 For doing performance work, it helps to use the `olly` tracer from the
-`runtime_events_tools` package. 
+`runtime_events_tools` package.
 
 ```
 ; opam install runtime_events_tools -y
@@ -167,7 +163,7 @@ on in the viewer, like this:
 
 1. click on a Process to see it expand
 2. click on the trace name you're interested in (say `major_slice`)
-3. in the details tab below click on the name 
+3. in the details tab below click on the name
 4. click on "Slices with the same name"
 5. click on Duration and sort by Highest First
 

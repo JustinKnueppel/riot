@@ -23,6 +23,10 @@
  (url "git+https://github.com/riot-ml/bytestring.git")
  (package (name bytestring)))
 
+(pin
+ (url "git+https://github.com/riot-ml/gluon")
+ (package (name gluon)))
+
 (package
  (name riot)
  (synopsis "An actor-model multi-core scheduler for OCaml 5")
@@ -32,17 +36,17 @@
   bytestring 
   (castore (and :with-test (>= "0.0.2")))
   (config (>= "0.0.1"))
-  (gluon (>= "0.0.1"))
+  gluon
   (mdx (and :with-test (>= "2.3.1")))
-  (mirage-crypto (>= "0.11.2"))
-  (mirage-crypto-rng (>= "0.11.2"))
-  (mtime (>= "2.0.0"))
+  (mirage-crypto (>= "2.0.1"))
+  (mirage-crypto-rng (>= "2.0.1"))
+  (mtime (>= "2.1.0"))
   (ocaml (>= "5.1"))
   (odoc (and :with-doc (>= "2.2.2")))
-  (ptime (>= "1.1.0"))
+  (ptime (>= "1.2.0"))
   rio
   (telemetry (>= "0.0.1"))
-  (tls (>= "1.0.0"))
+  (tls (>= "2.0.1"))
   (uri (>= "4.4.0"))
   dune)
  (tags
