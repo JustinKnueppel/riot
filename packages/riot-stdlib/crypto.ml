@@ -1,4 +1,4 @@
-let () = Mirage_crypto_rng_unix.initialize (module Mirage_crypto_rng.Fortuna)
+let () = Mirage_crypto_rng_unix.use_default ()
 
 (* Some of the code from below is based on the randomconv repository.
    Source: https://github.com/hannesm/randomconv/
